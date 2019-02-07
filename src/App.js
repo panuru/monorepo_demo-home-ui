@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { CssReset, GlobalCss, Themes } from './style';
+import {
+  Header,
+  Container,
+  Banner,
+  Button,
+} from './components'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+export default () => {
+  return (
+    <ThemeProvider theme={Themes.default}>
+      <div>
+        <CssReset />
+        <GlobalCss />
+
+        <Header />
+        <Container>
+          <Banner src="https://via.placeholder.com/768x200?text=I'm a banner" />
+          <Button>Click me!</Button>
+        </Container>
       </div>
-    );
-  }
+    </ThemeProvider>
+  );
 }
-
-export default App;
