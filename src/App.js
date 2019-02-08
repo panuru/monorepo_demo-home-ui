@@ -1,12 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { CssReset, GlobalCss, Themes } from './style';
-import {
-  Header,
-  Container,
-  Banner,
-  Button,
-} from './components'
+import { Header, Container, Button, CssReset, GlobalCss, Themes } from '@monorepo-demo/monorepo_demo-design_system';
+import { Banner } from './components'
 
 export default () => {
   return (
